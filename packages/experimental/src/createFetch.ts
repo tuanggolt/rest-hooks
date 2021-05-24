@@ -25,6 +25,7 @@ export default function createFetch<
   const meta: FetchAction['meta'] = {
     schema: endpoint.schema,
     type: endpoint.sideEffect ? ('mutate' as const) : ('read' as const),
+    args,
     key,
     throttle,
     options: endpoint,
